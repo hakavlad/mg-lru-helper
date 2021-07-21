@@ -19,7 +19,7 @@ $ sudo make uninstall
 
 Run `mglru` (get the state), `mglru0` (disable mg-LRU) or `mglru1` (enable mg-LRU). You can add the oneshot service to startup. 
 
-Get the current status:
+Get the current state:
 ```
 $ mglru
 #!/bin/sh -v
@@ -52,6 +52,13 @@ Enable multigenerational LRU during system boot:
 ```
 sudo systemctl enable mglru1.service
 ```
+
+## Kernels with mg-LRU
+
+- https://github.com/xanmod/linux (https://xanmod.org/)
+- https://github.com/zen-kernel/zen-kernel (https://liquorix.net/)
+
+## Resources
 
 Multigenerational LRU Framework at LKML:
 - v1: https://lore.kernel.org/lkml/20210313075747.3781593-1-yuzhao@google.com/
