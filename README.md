@@ -1,6 +1,8 @@
 
 # Enable or disable multigenerational LRU
 
+There are simple shell scripts and oneshot systemd services to enable or disable multigenerational LRU at boot time or on-the-fly and also to get the current mg-LRU state.
+
 ## Install
 ```
 $ git clone https://github.com/hakavlad/mg-lru-helper.git
@@ -14,6 +16,8 @@ $ sudo make uninstall
 ```
 
 ## Usage
+
+Run `mglru` (get the state), `mglru0` (disable mg-LRU) or `mglru1` (enable mg-LRU). You can add the oneshot service to startup. 
 
 Get the current status:
 ```
@@ -53,4 +57,3 @@ Multigenerational LRU Framework at LKML:
 - v1: https://lore.kernel.org/lkml/20210313075747.3781593-1-yuzhao@google.com/
 - v2: https://lore.kernel.org/lkml/20210413065633.2782273-1-yuzhao@google.com/
 - v3: https://lore.kernel.org/lkml/20210520065355.2736558-1-yuzhao@google.com/
-
