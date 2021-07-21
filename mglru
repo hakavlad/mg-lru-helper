@@ -1,0 +1,2 @@
+#!/bin/sh -v
+cat /sys/kernel/mm/lru_gen/enabled
