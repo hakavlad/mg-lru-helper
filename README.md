@@ -1,7 +1,7 @@
 
 # Enable or disable multigenerational LRU
 
-There are simple shell scripts and oneshot systemd services to enable or disable multigenerational LRU at boot time or on-the-fly and also to get the current mg-LRU state.
+There are simple shell scripts and onehot systemd services to enable or disable multigenerational LRU at boot time or on the fly, and to get the current state of mg-LRU. 
 
 ## Install
 ```
@@ -45,18 +45,18 @@ echo 0 | sudo tee /sys/kernel/mm/lru_gen/enabled
 
 Disable multigenerational LRU during system boot:
 ```
-sudo systemctl enable mglru0.service
+$ sudo systemctl enable mglru0.service
 ```
 
 Enable multigenerational LRU during system boot:
 ```
-sudo systemctl enable mglru1.service
+$ sudo systemctl enable mglru1.service
 ```
 
 ## Kernels with mg-LRU
 
-- https://github.com/xanmod/linux (https://xanmod.org/)
-- https://github.com/zen-kernel/zen-kernel (https://liquorix.net/)
+- https://github.com/xanmod/linux (https://xanmod.org)
+- https://github.com/zen-kernel/zen-kernel (https://liquorix.net)
 
 ## Resources
 
