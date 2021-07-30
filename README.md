@@ -1,7 +1,7 @@
 
 # Enable or disable multigenerational LRU
 
-There are simple shell scripts and onehot systemd services to enable or disable multigenerational LRU at boot time or on the fly, and to get the current state of mg-LRU. 
+There are simple shell scripts and oneshot systemd services to enable or disable multigenerational LRU at boot time or on the fly, and to get the current state of mg-LRU. 
 
 ## Usage
 
