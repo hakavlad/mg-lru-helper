@@ -1,0 +1,3 @@
+#!/bin/sh -v
+cat /sys/kernel/mm/lru_gen/min_ttl_ms
+echo $1 | sudo tee /sys/kernel/mm/lru_gen/min_ttl_ms
