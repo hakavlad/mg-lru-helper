@@ -5,7 +5,7 @@ There are simple shell scripts and oneshot systemd services to enable or disable
 
 ## Usage
 
-Run `mglru` (get the state), `mglru0` (disable mg-LRU) or `mglru1` (enable mg-LRU). You can add the oneshot service to startup. 
+Run `mglru` (get the state), `mglru0` (disable mg-LRU), `mglru1` (enable mg-LRU), `min_ttl_ms` (get `min_ttl_ms`) and `set_min_ttl_ms`. You can add the oneshot service to startup. 
 
 Get the current state:
 ```
@@ -19,6 +19,7 @@ Enable multigenerational LRU:
 ```
 $ mglru1
 #!/bin/sh -v
+# Enable multigenerational LRU
 echo 1 | sudo tee /sys/kernel/mm/lru_gen/enabled
 1
 ```
@@ -27,8 +28,25 @@ Disable multigenerational LRU:
 ```
 $ mglru0
 #!/bin/sh -v
+# Disable multigenerational LRU
 echo 0 | sudo tee /sys/kernel/mm/lru_gen/enabled
 0
+```
+
+Get `min_ttl_ms`:
+```
+$ min_ttl_ms
+#!/bin/sh -v
+cat /sys/kernel/mm/lru_gen/min_ttl_ms
+0
+```
+
+Set `min_ttl_ms`:
+```
+$ set_min_ttl_ms 1000
+#!/bin/sh -v
+echo $1 | sudo tee /sys/kernel/mm/lru_gen/min_ttl_ms
+1000
 ```
 
 Disable multigenerational LRU during system boot:
