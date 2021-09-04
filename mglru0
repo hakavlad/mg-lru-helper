@@ -1,2 +1,3 @@
 #!/bin/sh -v
+# Disable multigenerational LRU
 echo 0 | sudo tee /sys/kernel/mm/lru_gen/enabled

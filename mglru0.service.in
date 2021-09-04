@@ -1,5 +1,5 @@
 [Unit]
-Description=Disable mg-LRU
+Description=Disable multigenerational LRU
 ConditionPathExists=/sys/kernel/mm/lru_gen/enabled
 Documentation=https://github.com/hakavlad/mg-lru-helper
 
