@@ -1,45 +1,39 @@
 
 # Enable or disable multigenerational LRU
 
-There are simple shell scripts and oneshot systemd services to enable or disable multigenerational LRU at boot time or on the fly, and to get the current state of mg-LRU. 
+There are simple shell scripts and oneshot systemd services to enable or disable multigenerational LRU at boot time or on the fly, and to get the current state of mg-LRU.
 
 ## Usage
 
-Run `mglru` (get the state), `mglru0` (disable mg-LRU), `mglru1` (enable mg-LRU), `min_ttl_ms` (get `min_ttl_ms`) and `set_min_ttl_ms`. You can add the oneshot service to startup. 
+Run `mglru` (get the state), `set_mglru N` (enable/disable mg-LRU), and `set_min_ttl_ms M`. You can add the oneshot service to startup.
 
 Get the current state:
 ```
 $ mglru
-#!/bin/sh -v
+#!/bin/sh -ev
 cat /sys/kernel/mm/lru_gen/enabled
-1
+0x0000
+cat /sys/kernel/mm/lru_gen/min_ttl_ms
+0
 ```
 
 Enable multigenerational LRU:
 ```
-$ mglru1
-#!/bin/sh -v
-# Enable multigenerational LRU
-echo 1 | sudo tee /sys/kernel/mm/lru_gen/enabled
+$ set_mglru 1
+#!/bin/sh -ev
+echo $1 | sudo tee /sys/kernel/mm/lru_gen/enabled
 1
 ```
 
 Disable multigenerational LRU:
 ```
-$ mglru0
-#!/bin/sh -v
-# Disable multigenerational LRU
-echo 0 | sudo tee /sys/kernel/mm/lru_gen/enabled
+$ set_mglru 0
+#!/bin/sh -ev
+echo $1 | sudo tee /sys/kernel/mm/lru_gen/enabled
 0
 ```
 
-Get `min_ttl_ms`:
-```
-$ min_ttl_ms
-#!/bin/sh -v
-cat /sys/kernel/mm/lru_gen/min_ttl_ms
-0
-```
+`set_mglru ` takes values from 0 to 7 (since MGLRU v7). [Most users should enable or disable all the features unless some of them have unforeseen side effects.](https://lore.kernel.org/linux-mm/20220208081902.3550911-13-yuzhao@google.com/#iZ31Documentation:admin-guide:mm:multigen_lru.rst)
 
 Set `min_ttl_ms`:
 ```
@@ -49,14 +43,15 @@ echo $1 | sudo tee /sys/kernel/mm/lru_gen/min_ttl_ms
 1000
 ```
 
-Disable multigenerational LRU during system boot:
+Enable/disable multigenerational LRU during system boot:
 ```
-$ sudo systemctl enable mglru0.service
+$ sudo systemctl enable mglru.service
 ```
+By default it sets `/sys/kernel/mm/lru_gen/enabled` to 1 and `/sys/kernel/mm/lru_gen/min_ttl_ms` to 1000.
 
-Enable multigenerational LRU during system boot:
+Edit the unit file using systemctl (to change `enabled` and `min_ttl_ms` values):
 ```
-$ sudo systemctl enable mglru1.service
+sudo systemctl edit mglru.service --full
 ```
 
 ## Installation
