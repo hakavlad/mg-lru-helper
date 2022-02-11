@@ -12,9 +12,9 @@ Get the current state:
 $ mglru
 #!/bin/sh -ev
 cat /sys/kernel/mm/lru_gen/enabled
-0x0001
+0x0007
 cat /sys/kernel/mm/lru_gen/min_ttl_ms
-1
+1000
 ```
 
 Disable multigenerational LRU:
@@ -34,7 +34,6 @@ echo $1 | sudo tee /sys/kernel/mm/lru_gen/enabled
 ```
 
 Apply all the multigenerational LRU features:
-
 ```
 $ set_mglru y
 #!/bin/sh -ev
@@ -46,17 +45,17 @@ y
 
 Set `min_ttl_ms`:
 ```
-$ set_min_ttl_ms 1000
+$ set_min_ttl_ms 2000
 #!/bin/sh -v
 echo $1 | sudo tee /sys/kernel/mm/lru_gen/min_ttl_ms
-1000
+2000
 ```
 
 Enable/disable multigenerational LRU during system boot:
 ```bash
 $ sudo systemctl enable mglru.service
 ```
-By default it sets `/sys/kernel/mm/lru_gen/enabled` to 1 and `/sys/kernel/mm/lru_gen/min_ttl_ms` to 1000.
+By default it sets `/sys/kernel/mm/lru_gen/enabled` to Y and `/sys/kernel/mm/lru_gen/min_ttl_ms` to 1000.
 
 Edit the unit file using systemctl (to change `enabled` and `min_ttl_ms` values):
 ```bash
