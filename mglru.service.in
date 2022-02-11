@@ -6,8 +6,8 @@ Documentation=https://github.com/hakavlad/mg-lru-helper
 [Service]
 Type=oneshot
 
-# valid values: [0; 7]
-ExecStart=-:TARGET_BIN:/set_mglru 1
+# valid values: [0; 7] and [yYnN]
+ExecStart=-:TARGET_BIN:/set_mglru Y
 
 # valid values: >= 0
 ExecStartPost=-:TARGET_BIN:/set_min_ttl_ms 1000
