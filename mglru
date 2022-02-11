@@ -1,2 +1,3 @@
-#!/bin/sh -v
+#!/bin/sh -ev
 cat /sys/kernel/mm/lru_gen/enabled
+cat /sys/kernel/mm/lru_gen/min_ttl_ms

@@ -1,3 +1,0 @@
-#!/bin/sh -v
-# Enable multigenerational LRU
-echo 1 | sudo tee /sys/kernel/mm/lru_gen/enabled
