@@ -42,7 +42,7 @@ echo $1 | sudo tee /sys/kernel/mm/lru_gen/enabled
 y
 ```
 
-`set_mglru ` takes values from 0 to 7 (since MGLRU v7). [Most users should enable or disable all the features unless some of them have unforeseen side effects.](https://lore.kernel.org/linux-mm/20220208081902.3550911-13-yuzhao@google.com/#iZ31Documentation:admin-guide:mm:multigen_lru.rst)
+`set_mglru ` takes values from 0 to 7 and `[yYnN]` (since MGLRU v7). [Most users should enable or disable all the features unless some of them have unforeseen side effects.](https://lore.kernel.org/linux-mm/20220208081902.3550911-13-yuzhao@google.com/#iZ31Documentation:admin-guide:mm:multigen_lru.rst)
 
 Set `min_ttl_ms`:
 ```
