@@ -77,6 +77,7 @@ $ sudo make uninstall
 
 - https://github.com/xanmod/linux (https://xanmod.org)
 - https://github.com/zen-kernel/zen-kernel (https://liquorix.net)
+- https://gitlab.com/post-factum/pf-kernel/-/wikis/README
 
 ## Resources
 
@@ -85,7 +86,22 @@ Multigenerational LRU Framework at LKML:
 - v2: https://lore.kernel.org/lkml/20210413065633.2782273-1-yuzhao@google.com/
 - v3: https://lore.kernel.org/lkml/20210520065355.2736558-1-yuzhao@google.com/
 - v4: https://lore.kernel.org/lkml/20210818063107.2696454-1-yuzhao@google.com/
+- v5: https://lore.kernel.org/lkml/20211111041510.402534-1-yuzhao@google.com/
+- v6: https://lore.kernel.org/lkml/20220104202227.2903605-1-yuzhao@google.com/
+- v7: https://lore.kernel.org/lkml/20220208081902.3550911-1-yuzhao@google.com/
 
 Multigenerational LRU Framework at LWN.net:
 - https://lwn.net/Articles/851184/
 - https://lwn.net/Articles/856931/
+
+Multigenerational LRU Framework at phoronix:
+- https://www.phoronix.com/scan.php?page=news_item&px=Linux-Multigen-LRU
+- https://www.phoronix.com/scan.php?page=news_item&px=Multigenerational-LRU-v2
+- https://www.phoronix.com/scan.php?page=news_item&px=Multigen-LRU-Framework-V3
+- https://www.phoronix.com/scan.php?page=news_item&px=Multigen-LRU-v5
+- https://www.phoronix.com/scan.php?page=news_item&px=Linux-MGLRU-v6-Linux
+
+Multigenerational LRU Framework at linux.org.ru:
+- https://www.linux.org.ru/forum/general/16321096
+
+
