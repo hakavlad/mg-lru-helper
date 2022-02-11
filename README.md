@@ -96,6 +96,7 @@ Multigenerational LRU Framework at LKML:
 Multigenerational LRU Framework at LWN.net:
 - https://lwn.net/Articles/851184/
 - https://lwn.net/Articles/856931/
+- https://lwn.net/Articles/881675/
 
 Multigenerational LRU Framework at phoronix:
 - https://www.phoronix.com/scan.php?page=news_item&px=Linux-Multigen-LRU
