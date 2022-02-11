@@ -53,27 +53,27 @@ echo $1 | sudo tee /sys/kernel/mm/lru_gen/min_ttl_ms
 ```
 
 Enable/disable multigenerational LRU during system boot:
-```
+```bash
 $ sudo systemctl enable mglru.service
 ```
 By default it sets `/sys/kernel/mm/lru_gen/enabled` to 1 and `/sys/kernel/mm/lru_gen/min_ttl_ms` to 1000.
 
 Edit the unit file using systemctl (to change `enabled` and `min_ttl_ms` values):
-```
-sudo systemctl edit mglru.service --full
+```bash
+$ sudo systemctl edit mglru.service --full
 ```
 
 ## Installation
 
 Install
-```
+```bash
 $ git clone https://github.com/hakavlad/mg-lru-helper.git
 $ cd mg-lru-helper
 $ sudo make install
 ```
 
 Uninstall
-```
+```bash
 $ sudo make uninstall
 ```
 
