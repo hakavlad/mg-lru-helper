@@ -92,11 +92,18 @@ Multigenerational LRU Framework at LKML:
 - v5: https://lore.kernel.org/lkml/20211111041510.402534-1-yuzhao@google.com/
 - v6: https://lore.kernel.org/lkml/20220104202227.2903605-1-yuzhao@google.com/
 - v7: https://lore.kernel.org/lkml/20220208081902.3550911-1-yuzhao@google.com/
+- v8: https://lore.kernel.org/lkml/20220308234723.3834941-1-yuzhao@google.com/
+- v9: https://lore.kernel.org/lkml/20220309021230.721028-1-yuzhao@google.com/
+- v10: https://lore.kernel.org/lkml/20220407031525.2368067-1-yuzhao@google.com/
+- v11: https://lore.kernel.org/lkml/20220518014632.922072-1-yuzhao@google.com/
+- v12: https://lore.kernel.org/lkml/20220614071650.206064-1-yuzhao@google.com/
+- v13: https://lore.kernel.org/lkml/20220706220022.968789-1-yuzhao@google.com/
 
 Multigenerational LRU Framework at LWN.net:
 - https://lwn.net/Articles/851184/
 - https://lwn.net/Articles/856931/
 - https://lwn.net/Articles/881675/
+- https://lwn.net/Articles/894859/
 
 Multigenerational LRU Framework at phoronix:
 - https://www.phoronix.com/scan.php?page=news_item&px=Linux-Multigen-LRU
@@ -104,6 +111,13 @@ Multigenerational LRU Framework at phoronix:
 - https://www.phoronix.com/scan.php?page=news_item&px=Multigen-LRU-Framework-V3
 - https://www.phoronix.com/scan.php?page=news_item&px=Multigen-LRU-v5
 - https://www.phoronix.com/scan.php?page=news_item&px=Linux-MGLRU-v6-Linux
+- https://www.phoronix.com/scan.php?page=news_item&px=MGLRU-Not-For-5.18
+- https://www.phoronix.com/scan.php?page=news_item&px=Linux-MGLRU-v9-Promising
+- https://www.phoronix.com/scan.php?page=news_item&px=MGLRU-v10
+- https://www.phoronix.com/scan.php?page=news_item&px=MGLRU-v11-Linux-Perf
+- https://www.phoronix.com/scan.php?page=news_item&px=MGLRU-v12-For-Linux-5.19-rc
+- https://www.phoronix.com/scan.php?page=news_item&px=MGLRU-July-2022-Performance
+- https://www.phoronix.com/scan.php?page=news_item&px=MGLRU-v13-More-Benchmarks
 
 Multigenerational LRU Framework at linux.org.ru:
 - https://www.linux.org.ru/forum/general/16321096
