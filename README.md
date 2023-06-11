@@ -3,6 +3,8 @@
 
 There are simple shell scripts and oneshot systemd services to enable or disable multigenerational LRU at boot time or on the fly, and to get the current state of mg-LRU.
 
+[MGLRU Patches Merged To "mm-stable" Ahead Of Linux 6.1](https://www.phoronix.com/news/MGLRU-Reaches-mm-stable)
+
 ## Usage
 
 Run `mglru` (get the current state), `set_mglru N` (enable/disable mg-LRU), and `set_min_ttl_ms M`. You can add the oneshot service to startup.
